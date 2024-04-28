@@ -18,6 +18,9 @@ export class ListarPlantasComponent implements OnInit {
       this.plantas = plantas;
     });
   }
+  numeroPlantasTipo(tipo: string): number{
+    return this.plantas.filter(planta => planta.tipo === tipo).length;
+  }
 
   ngOnInit() {
     this.getPlantas();
